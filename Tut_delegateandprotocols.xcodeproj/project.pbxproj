@@ -13,6 +13,7 @@
 		1692698821567065000D2BDC /* Tut_delegateandprotocols.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1692698621567065000D2BDC /* Tut_delegateandprotocols.xcdatamodeld */; };
 		1692698A21567067000D2BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1692698921567067000D2BDC /* Assets.xcassets */; };
 		1692698D21567067000D2BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692698B21567067000D2BDC /* LaunchScreen.storyboard */; };
+		1692699521569183000D2BDC /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692699421569183000D2BDC /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1692698921567067000D2BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1692698C21567067000D2BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1692698E21567067000D2BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1692699421569183000D2BDC /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1692697F21567065000D2BDC /* AppDelegate.swift */,
 				1692698121567065000D2BDC /* ViewController.swift */,
+				1692699421569183000D2BDC /* SecondVC.swift */,
 				1692698321567065000D2BDC /* Main.storyboard */,
 				1692698921567067000D2BDC /* Assets.xcassets */,
 				1692698B21567067000D2BDC /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				1692698221567065000D2BDC /* ViewController.swift in Sources */,
 				1692698021567065000D2BDC /* AppDelegate.swift in Sources */,
+				1692699521569183000D2BDC /* SecondVC.swift in Sources */,
 				1692698821567065000D2BDC /* Tut_delegateandprotocols.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

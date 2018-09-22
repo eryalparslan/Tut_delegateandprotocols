@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,101 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tut_delegateandprotocols" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-B5-3Yy">
+                                <rect key="frame" x="67" y="269.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9FO-mG-VfM"/>
+                                    <constraint firstAttribute="width" constant="240" id="sJc-2K-Lr7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-T0-MaA">
+                                <rect key="frame" x="147.5" y="417.5" width="79" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="GEÇ"/>
+                                <connections>
+                                    <segue destination="v7h-DH-d6v" kind="presentation" identifier="goSegue" id="Ves-z2-OO8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sgc-T0-MaA" firstAttribute="top" secondItem="YmR-B5-3Yy" secondAttribute="bottom" constant="20" id="BUs-fl-8lf"/>
+                            <constraint firstItem="YmR-B5-3Yy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CX7-aa-Yl4"/>
+                            <constraint firstItem="YmR-B5-3Yy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qik-qB-tGO"/>
+                            <constraint firstItem="Sgc-T0-MaA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VtO-wa-Y0U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myImageView" destination="YmR-B5-3Yy" id="pJa-Al-08h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="126" y="117"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="ocv-Yb-QCO">
+            <objects>
+                <viewController id="v7h-DH-d6v" customClass="SecondVC" customModule="Tut_delegateandprotocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQL-eR-7Eh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R8b-53-J86">
+                                <rect key="frame" x="55.5" y="284" width="264" height="99"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wRi-XI-c8f">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="99"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Zmn-WV-LyW" appends="YES" id="v2b-oQ-oAT"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xof-P2-Rxg">
+                                        <rect key="frame" x="137" y="0.0" width="127" height="99"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="87L-oQ-gLo" appends="YES" id="s5V-OA-Q4O"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="cAy-4J-kX7"/>
+                                    <constraint firstAttribute="width" constant="264" id="ifs-VR-hFZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R8b-53-J86" firstAttribute="centerX" secondItem="wQL-eR-7Eh" secondAttribute="centerX" id="6LF-vr-LuC"/>
+                            <constraint firstItem="R8b-53-J86" firstAttribute="centerY" secondItem="wQL-eR-7Eh" secondAttribute="centerY" id="x35-Wq-4iF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="04M-KT-bLz"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="wRi-XI-c8f" id="yAO-8a-LmK"/>
+                        <outlet property="secondImageView" destination="xof-P2-Rxg" id="nix-vz-UX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVC-xR-VkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zmn-WV-LyW">
+                    <connections>
+                        <action selector="firstTapped:" destination="v7h-DH-d6v" id="zs2-Tl-lXR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="87L-oQ-gLo">
+                    <connections>
+                        <action selector="secondTapped:" destination="v7h-DH-d6v" id="rHT-eg-YMi"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
