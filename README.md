@@ -1,6 +1,6 @@
 # Mobil Uygulama Dersleri - iOS Notları
 
-### TabbarController ile Veri Alışverişi
+### Delege ve Protokol Kullanımı
 
 Delegate ve Protokol yapıları Communication Patterns konusu içinde yer alır. 
 Temelde ViewController lar arasında iki yönlü iletişim kurmamızı sağlar.
